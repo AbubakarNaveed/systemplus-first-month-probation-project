@@ -1,6 +1,6 @@
 @import "./varables/colors";
 @import "./varables/fonts";
-
+@import "./components/sidebar/sidebar";
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +9,14 @@
 
 body {
   font-family: $font_family;
+  background-color: $bg_color;
 }
 
-// .container {
-//   max-width: 1400px;
-//   margin: 0 auto;
-// }
+.container {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
