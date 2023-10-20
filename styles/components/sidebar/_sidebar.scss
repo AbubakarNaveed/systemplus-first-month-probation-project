@@ -1,7 +1,6 @@
 .sidebar {
   height: 100vh;
   padding: 24px 16px;
-  max-width: 450px;
   min-width: 250px;
   border-right: 1px solid $border_color;
   display: flex;
@@ -48,7 +47,7 @@
 
     display: flex;
     justify-content: center;
-    background-color: #bf3947;
+    background-color: $bg_color-sidebar-button;
     padding: 12px 16px;
     align-items: center;
     border: none;
