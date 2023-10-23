@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 .sidebar {
   height: 100vh;
   padding: 24px 16px;
@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .sidebar-wrapper {
@@ -214,7 +215,6 @@
 .wigdet_container {
   padding: 0px 24px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 24px 0px;
@@ -226,7 +226,11 @@
   padding: 20px;
   border: 1px solid #dcdee6;
   border-radius: 12px;
-  min-width: 275px;
+  min-width: 290px;
+}
+.widget:hover {
+  border-color: #bf3947;
+  box-shadow: 0px 0px 10px #e7aeb4;
 }
 
 .widget_wrapper {
@@ -331,14 +335,209 @@
   color: #292b33;
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1500px) {
   .widget {
     padding: 20px;
     border: 1px solid #dcdee6;
     border-radius: 12px;
-    min-width: 375px;
+    min-width: 330px;
+  }
+  .wigdet_container {
+    width: 1400px;
+    margin: 24px auto;
   }
 }
+.table {
+  padding: 0px 24px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.table_wrapper {
+  border: 1px solid #dcdee6;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.table_header {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: space-between;
+  background-color: #f2f0f0;
+}
+.table_header .taskname {
+  margin-left: 40px;
+  margin-right: 90px;
+}
+.table_header .taskname p {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #6b6f80;
+  letter-spacing: 0.96px;
+}
+.table_header .lead p {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #6b6f80;
+  letter-spacing: 0.96px;
+}
+.table_header .scheduler p {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #6b6f80;
+  letter-spacing: 0.96px;
+}
+.table_header .service_provider p {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #6b6f80;
+  letter-spacing: 0.96px;
+}
+.table_header .deadline p {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #6b6f80;
+  letter-spacing: 0.96px;
+}
+.table_header .priority p {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #6b6f80;
+  letter-spacing: 0.96px;
+}
+
+.table_function {
+  display: flex;
+  padding: 12px 24px;
+  border-bottom: 1px solid #dcdee6;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbf2f3;
+}
+.table_function .section1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.table_function .section1 p {
+  font-size: 14px !important;
+  font-weight: 600;
+  color: #000;
+  line-height: 17px;
+}
+.table_function .section1 img {
+  width: 20px;
+  height: 20px;
+}
+.table_function .section1 button {
+  padding: 8px 12px;
+  border-radius: 200px;
+  border: 1px solid #bbcaf3;
+  background-color: #e8edfb;
+}
+.table_function .section2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.table_function .section2 button {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  gap: 6px;
+}
+.table_function .section2 button p {
+  font-size: 14px;
+}
+.table_function .section2 button img {
+  height: 16px;
+  width: 16px;
+}
+.table_function .section2 button:hover {
+  border-color: #bf3947;
+  box-shadow: 0px 0px 10px #e7aeb4;
+}
+
+@media only screen and (min-width: 1500px) {
+  .table {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+}
+.table_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.table_data > div:last-child {
+  border-bottom: none;
+}
+
+.table_row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdee6;
+  align-items: center;
+  padding: 8px 24px;
+  /* Style the custom radio button */
+  /* Create a circular container for the custom radio button */
+}
+.table_row .task_data {
+  flex: 1.4;
+}
+.table_row .avatar_data {
+  flex: 1;
+}
+.table_row .date_data {
+  flex: 1;
+}
+.table_row input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e7aeb4;
+  border-radius: 50%;
+}
+.table_row div {
+  display: flex;
+  align-items: center;
+}
+.table_row div input {
+  margin-right: 25px;
+  margin-left: 3px;
+}
+.table_row div .name {
+  font-size: 14px;
+  font-weight: 400;
+}
+.table_row div .date {
+  color: #292b33;
+  font-size: 14px;
+  font-weight: 400;
+}
+.table_row div .table_avatar {
+  height: 28px;
+  width: 28px;
+  margin-right: 8px;
+}
+.table_row div .table_icon {
+  margin-right: 8px;
+  height: 15px;
+  width: 15px;
+}
+.table_row div button {
+  background-color: transparent;
+  border: none;
+}
+
 * {
   margin: 0;
   padding: 0;

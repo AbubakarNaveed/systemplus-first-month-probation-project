@@ -3,6 +3,7 @@
 @import "./components/sidebar/sidebar";
 @import "./components/mainComponents/mainHeader";
 @import "./components/mainComponents/widget.scss";
+@import "./components/mainComponents/table";
 * {
   margin: 0;
   padding: 0;
@@ -21,5 +22,9 @@ body {
 .main {
   display: flex;
   flex-direction: column;
+
   width: calc(100vw - 250px);
+}
+
+@media only screen and (min-width: 1600px) {
 }
