@@ -1,0 +1,127 @@
+.wigdet_container {
+  padding: 0px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0px;
+  width: 100%;
+  gap: 10px;
+}
+
+.widget {
+  padding: 20px;
+  border: 1px solid $border_color;
+  border-radius: 12px;
+  min-width: 275px;
+}
+
+.widget_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.widget_header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.widget_header_text {
+  color: $font_color-widget-dark-gray;
+  font-size: $font_size_task-widget-md;
+  font-weight: $font_weight-500;
+  line-height: 16px;
+}
+
+.widget_header_icon_section {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  gap: 3px;
+  p {
+    color: $font_color-widget-dark-gray;
+    font-size: $font_size_task-widget-md;
+    font-weight: $font_weight-500;
+    line-height: 16px;
+  }
+  img {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.widget_body {
+  width: 100%;
+  justify-content: flex-start;
+  p {
+    font-size: $font_size_task-widget-xl;
+
+    font-weight: $font_weight-700;
+    line-height: 28px;
+  }
+}
+
+.widget_footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 18px;
+  p {
+    font-size: $font_size_task-widget-sm;
+    color: $font_color-gray;
+  }
+}
+
+@mixin ratingColor($bgColor) {
+  height: 10px;
+  width: 10px;
+  border-radius: 2px;
+  background-color: map-get($scale_colors-widget, $bgColor);
+}
+
+.rating_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    .rating_color--red {
+      @include ratingColor("high");
+    }
+    .rating_color--blue {
+      @include ratingColor("normal");
+    }
+    .rating_color--yellow {
+      @include ratingColor("low");
+    }
+    p {
+      font-size: $font_size_task-widget-lg;
+      color: $font_color-light-black;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .widget {
+    padding: 20px;
+    border: 1px solid $border_color;
+    border-radius: 12px;
+    min-width: 375px;
+  }
+}

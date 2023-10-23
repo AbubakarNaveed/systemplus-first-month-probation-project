@@ -155,7 +155,7 @@
   border-bottom: 1px solid #dcdee6;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
 }
 
 .heading_section {
@@ -211,6 +211,134 @@
   color: #6b6f80;
 }
 
+.wigdet_container {
+  padding: 0px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 24px 0px;
+  width: 100%;
+  gap: 10px;
+}
+
+.widget {
+  padding: 20px;
+  border: 1px solid #dcdee6;
+  border-radius: 12px;
+  min-width: 275px;
+}
+
+.widget_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.widget_header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.widget_header_text {
+  color: #545766;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.widget_header_icon_section {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  gap: 3px;
+}
+.widget_header_icon_section p {
+  color: #545766;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.widget_header_icon_section img {
+  height: 20px;
+  width: 20px;
+}
+
+.widget_body {
+  width: 100%;
+  justify-content: flex-start;
+}
+.widget_body p {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.widget_footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 18px;
+}
+.scale p {
+  font-size: 11px;
+  color: #6b6f80;
+}
+
+.rating_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+}
+.rating div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+.rating div .rating_color--red {
+  height: 10px;
+  width: 10px;
+  border-radius: 2px;
+  background-color: #f87171;
+}
+.rating div .rating_color--blue {
+  height: 10px;
+  width: 10px;
+  border-radius: 2px;
+  background-color: #6183e4;
+}
+.rating div .rating_color--yellow {
+  height: 10px;
+  width: 10px;
+  border-radius: 2px;
+  background-color: #fcd34d;
+}
+.rating div p {
+  font-size: 16px;
+  color: #292b33;
+}
+
+@media only screen and (min-width: 1600px) {
+  .widget {
+    padding: 20px;
+    border: 1px solid #dcdee6;
+    border-radius: 12px;
+    min-width: 375px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
