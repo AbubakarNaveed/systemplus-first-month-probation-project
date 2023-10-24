@@ -4,6 +4,8 @@
 @import "./components/mainComponents/mainHeader";
 @import "./components/mainComponents/widget.scss";
 @import "./components/mainComponents/table";
+@import "./components/responsiveResponsiveBar/responsiveTopBar";
+@import "./components/responsiveTable/responsiveTable";
 * {
   margin: 0;
   padding: 0;
@@ -27,4 +29,13 @@ body {
 }
 
 @media only screen and (min-width: 1600px) {
+}
+
+@media only screen and (max-width: 1284px) {
+  .main {
+    width: 100%;
+  }
+  .container {
+    flex-direction: column;
+  }
 }

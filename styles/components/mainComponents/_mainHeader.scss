@@ -59,3 +59,15 @@
     color: $font_color-gray;
   }
 }
+
+@media only screen and (max-width: 1284px) {
+  //  .main_header {
+  //      border-bottom: ;
+  //   }
+}
+
+@media only screen and (max-width: 510px) {
+  .main_header {
+    border-bottom: none;
+  }
+}

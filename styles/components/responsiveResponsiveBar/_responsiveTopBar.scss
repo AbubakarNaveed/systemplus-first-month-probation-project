@@ -1,0 +1,34 @@
+.mobile_view_topbar {
+  display: none;
+  padding: 24px 16px;
+  background-color: #fff;
+  justify-content: flex-start;
+  width: 100%;
+  border-bottom: 1px solid $border_color;
+
+  .header {
+    display: flex;
+    align-items: center;
+    .burger {
+      border: 1px solid $border_color;
+      border-radius: 4px;
+      padding: 4px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .logo {
+      img {
+        width: 160px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1284px) {
+  .mobile_view_topbar {
+    display: flex;
+  }
+}

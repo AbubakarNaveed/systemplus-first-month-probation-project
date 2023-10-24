@@ -1,0 +1,201 @@
+.responsive_table {
+  display: none;
+  width: 510px;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.function_stack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.function_stack_row {
+  padding: 12px 20px;
+  background-color: $icon_btn_bg_color-side-bar-hover;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  .button_section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    p {
+      color: black;
+      font-size: 14px;
+      font-weight: $font_weight-600;
+    }
+    .button {
+      padding: 8px 16px;
+      border-radius: 200px;
+      font-size: $font_size-sm;
+      font-weight: $font_weight-500;
+    }
+    .--blue {
+      border: 1px solid #bbcaf3;
+      background-color: #e8edfb;
+    }
+    .--yellow {
+      background-color: #f59e0b;
+      border: 1px solid #f59e0b;
+      color: #fff;
+    }
+    .--pink {
+      background-color: #fee2e2;
+      border: 1px solid #fecaca;
+      color: black;
+    }
+  }
+  .dot_button {
+    button {
+      padding: 6px;
+      border-radius: 8px;
+      border: 1px solid $border_color;
+
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+.data_stack {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.data_section_1 {
+  display: flex;
+  justify-content: flex-start;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    p {
+      font-size: 14px;
+      font-weight: $font_weight-400;
+    }
+  }
+}
+
+.data_section_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .task_name {
+      font-size: $font_size-sm;
+      color: $font_color-gray;
+      text-transform: uppercase;
+    }
+    .avatar_data {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      p {
+        font-size: $font_size-sm;
+        font-weight: $font_weight-500;
+      }
+      img {
+        height: 24px;
+        width: 24px;
+        border-radius: 2000px;
+      }
+    }
+  }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  display: block;
+  background: url(../../../assests/calendarPicker.svg);
+  font-family: Inter;
+  //no-repeat;
+}
+
+.data_section_3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .button_section_1 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    p {
+      font-size: $font_size-sm;
+      color: $font_color-gray;
+    }
+    input {
+      border: 1px solid $border_color;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: $font_size-sm;
+      color: #000000;
+      background-color: $bg_color;
+    }
+  }
+  .button_section_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    p {
+      font-size: $font_size-sm;
+      color: $font_color-gray;
+    }
+    div {
+      padding: 8px 12px;
+      display: flex;
+      border-radius: 4px;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid $border_color;
+      img {
+        height: 16px;
+        width: 16px;
+      }
+      p {
+        font-size: $font_size-sm;
+        font-weight: $font_weight-500;
+        color: #000000;
+      }
+    }
+  }
+}
+input[type="checkbox"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e7aeb4;
+  border-radius: 50%;
+  /* Adjust as needed for spacing */
+  vertical-align: middle; /* Align the radio button with the text properly */
+}
+
+input[type="checkbox"]:checked {
+  appearance: none;
+  background-color: #e7aeb4;
+  //   color: $bg_color-sidebar-button-hover; /* Align the radio button with the text properly */
+}
+
+@media only screen and (max-width: 1099px) {
+  .responsive_table {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .responsive_table {
+    width: 100%;
+  }
+}
