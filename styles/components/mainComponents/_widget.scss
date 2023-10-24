@@ -230,3 +230,41 @@
     align-items: center;
   }
 }
+
+@media only screen and (max-width: 409px) {
+  .widget {
+    width: 100%;
+    padding: 8px;
+  }
+  // .wigdet_container {
+  //   width: 100%;
+  //   margin: 16px auto;
+  //   justify-content: center;
+  //   flex-wrap: wrap;
+  //   gap: 12px;
+  // }
+  // .widget_wrapper {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 8px;
+  //   width: 100%;
+  // }
+  // .widget_footer {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  //   align-items: center;
+  // }
+  // .scale {
+  //   flex-direction: column;
+  //   justify-content: space-around;
+  //   height: 60px;
+  //   align-items: center;
+  // }
+  // .rating_container {
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  //   height: 60px;
+  //   align-items: center;
+  // }
+}
