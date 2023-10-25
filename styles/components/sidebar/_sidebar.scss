@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .sidebar-wrapper {
@@ -54,6 +55,7 @@
     border: none;
     border-radius: 8px;
     transition: all 300ms ease-in-out;
+
     gap: 5px;
     &:hover {
       background-color: $bg_color-sidebar-button-hover;
@@ -94,7 +96,34 @@
       width: 120%;
       gap: 12px;
       margin-left: -20px;
-      button {
+      .active {
+        background-color: #fbf2f3;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        transition: all 300ms ease-in-out;
+        width: 100%;
+        border: none;
+        gap: 12px;
+        border-radius: 12px;
+
+        padding: 8px 20px 8px 20px;
+
+        img {
+          height: 24px;
+          width: 24px;
+          filter: invert(23%) sepia(33%) saturate(4947%) hue-rotate(335deg)
+            brightness(97%) contrast(78%);
+        }
+        p {
+          line-height: 20px;
+          font-size: $font_size_task-widget-lg;
+          font-weight: $font_weight-500;
+          letter-spacing: 0.32px;
+          color: $bg_color-sidebar-button;
+        }
+      }
+      .not_active {
         background-color: transparent;
         display: flex;
         align-items: center;
@@ -104,15 +133,18 @@
         border: none;
         gap: 12px;
         border-radius: 12px;
+        // &:active {
+        //   background-color: #fbf2f3;
+        //   img {
+        //     filter: invert(23%) sepia(33%) saturate(4947%) hue-rotate(335deg)
+        //       brightness(97%) contrast(78%);
+        //   }
+        //   p {
+        //     color: $bg_color-sidebar-button;
+        //   }
+        // }
         &:hover {
-          background-color: #fbf2f3;
-          img {
-            filter: invert(23%) sepia(33%) saturate(4947%) hue-rotate(335deg)
-              brightness(97%) contrast(78%);
-          }
-          p {
-            color: $bg_color-sidebar-button;
-          }
+          background: #edeef2;
         }
 
         padding: 8px 20px 8px 20px;
@@ -120,11 +152,6 @@
         img {
           height: 24px;
           width: 24px;
-          //   transition: all 300ms ease-in-out;
-          //   &:hover {
-          //     filter: invert(23%) sepia(33%) saturate(4947%) hue-rotate(335deg)
-          //       brightness(97%) contrast(78%);
-          //   }
         }
         p {
           //   transition: all 300ms ease-in-out;

@@ -10,10 +10,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font_family !important;
 }
 
 body {
-  font-family: $font_family;
+  font-family: $font_family !important;
   background-color: $bg_color;
 }
 

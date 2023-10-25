@@ -18,8 +18,9 @@
   border-radius: 12px;
   min-width: 280px;
   &:hover {
-    border-color: $bg_color-sidebar-button;
-    box-shadow: 0px 0px 10px $shadow_color;
+    border-color: #e7aeb4;
+    // box-shadow: 0px 0px 10px $shadow_color;
+    box-shadow: -4px 4px 55px rgba(191, 57, 71, 0.12);
   }
 }
 
@@ -49,7 +50,7 @@
   height: 25px;
   gap: 3px;
   p {
-    color: $font_color-widget-dark-gray;
+    color: $font_color-widget-gray;
     font-size: $font_size_task-widget-md;
     font-weight: $font_weight-500;
     line-height: 16px;
@@ -120,6 +121,7 @@
     p {
       font-size: $font_size_task-widget-lg;
       color: $font_color-light-black;
+      font-weight: $font_weight-600 !important;
     }
   }
 }
@@ -142,7 +144,7 @@
   }
 }
 
-@media only screen and (max-width: 1415px) {
+@media only screen and (max-width: 1444px) {
   .widget {
     padding: 20px;
     border: 1px solid $border_color;

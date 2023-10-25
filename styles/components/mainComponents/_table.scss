@@ -101,7 +101,7 @@
       background-color: #fff;
       padding: 10px 16px;
       border-radius: 8px;
-      border: none;
+      border: 1px solid $border_color;
       gap: 6px;
       p {
         font-size: 14px;
@@ -111,24 +111,16 @@
         width: 16px;
       }
       &:hover {
-        border-color: $bg_color-sidebar-button;
-        box-shadow: 0px 0px 10px $shadow_color;
+        // border-color: $bg_color-sidebar-button;
+        // box-shadow: 0px 0px 10px $shadow_color;
+        border-color: #e7aeb4;
+        // box-shadow: 0px 0px 10px $shadow_color;
+        box-shadow: -4px 4px 55px rgba(191, 57, 71, 0.12);
       }
     }
   }
 }
 
-@media only screen and (min-width: 1500px) {
-  // .table {
-  //   // width: 1400px;
-  //   margin: 0 auto;
-  //   padding: 0 24px;
-  // }
-}
-
-.date_adjust {
-  // margin-left: 100px;
-}
 .table_data {
   display: flex;
   flex-direction: column;
@@ -155,61 +147,6 @@
     flex: 1;
   }
 
-  /* Style the custom radio button */
-  // input[type="radio"] {
-  //   position: relative;
-  // }
-
-  /* Create a circular container for the custom radio button */
-  // input[type="radio"] {
-  //   display: none;
-  // }
-
-  // input[type="radio"]::after {
-  //   content: "";
-
-  //   width: 20px; /* Adjust the size of the radio button */
-  //   height: 20px; /* Adjust the size of the radio button */
-  //   border: 2px solid #ff0000 !important; /* Set the border color */
-  //   border-radius: 50%; /* Make it circular */
-  //   margin-right: 25px;
-  //   margin-left: 3px;
-  // }
-  // input[type="radio"]:checked {
-  //   /* ...existing styles */
-
-  //   /* Windows High Contrast Mode */
-  // // }
-  // input[type="radio"] {
-  //   appearance: none;
-  //   // background-color: #fff;
-
-  //   width: 15px;
-  //   height: 15px;
-  //   border: 1px solid #e7aeb4;
-  //   border-radius: 50%;
-  // }
-  input[type="radio"] {
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #e7aeb4;
-    border-radius: 50%;
-    /* Adjust as needed for spacing */
-    vertical-align: middle; /* Align the radio button with the text properly */
-  }
-
-  input[type="radio"]:checked::before {
-    content: "";
-    background-color: blue;
-
-    // width: 15px;
-    // height: 15px;
-    // border: 1px solid #e7aeb4;
-    // border-radius: 50%;
-    /* Adjust as needed for spacing */
-    vertical-align: middle; /* Align the radio button with the text properly */
-  }
   div {
     display: flex;
     align-items: center;
@@ -239,25 +176,9 @@
     button {
       background-color: transparent;
       border: none;
-      // &:hover {
-      //   background-color: $shadow_color;
-      // }
     }
   }
 }
-
-// @media only screen and (min-width: 1700px) {
-//   // .widget {
-//   //   padding: 20px;
-//   //   border: 1px solid $border_color;
-//   //   border-radius: 12px;
-//   //   min-width: 300px;
-//   // }
-//   .table {
-//     max-width: 1600px;
-//     margin: 24px auto;
-//   }
-// }
 
 @media only screen and (max-width: 1099px) {
   .table {
