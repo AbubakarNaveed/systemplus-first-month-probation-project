@@ -5,6 +5,7 @@
   border-right: 1px solid $border_color;
   display: flex;
   flex-direction: column;
+  background-color: $bg_color;
   align-items: center;
   justify-content: space-between;
   overflow-y: scroll;
