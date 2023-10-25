@@ -371,7 +371,7 @@
     padding: 20px;
     border: 1px solid #dcdee6;
     border-radius: 12px;
-    min-width: 280px;
+    min-width: 290px;
   }
 }
 @media only screen and (max-width: 1488px) {
@@ -613,6 +613,7 @@
 .table_row div {
   display: flex;
   align-items: center;
+  height: 30px;
 }
 .table_row div input {
   margin-right: 25px;
@@ -634,12 +635,44 @@
 }
 .table_row div .table_icon {
   margin-right: 8px;
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
 }
-.table_row div button {
-  background-color: transparent;
-  border: none;
+
+.table_row .date_data {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.table_row .date_data .date_data_wrapper {
+  padding: 8px 4px;
+  border-radius: 4px;
+}
+.table_row .date_data .date_data_wrapper:hover {
+  background-color: #fbf2f3;
+  border: 1px dashed #e7aeb4;
+}
+
+a {
+  height: 10;
+}
+a .table_flag--yellow {
+  border: 1px dashed transparent;
+  padding: 5px;
+  border-radius: 8px;
+}
+a .table_flag--yellow:hover {
+  background-color: #fffbeb;
+  border-color: #fcd34d;
+}
+a .table_flag--blue {
+  border: 1px dashed transparent;
+  padding: 5px;
+  border-radius: 8px;
+}
+a .table_flag--blue:hover {
+  background-color: #e8edfb;
+  border-color: #8ea7ec;
 }
 
 @media only screen and (max-width: 1099px) {

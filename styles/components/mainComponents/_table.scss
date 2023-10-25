@@ -150,6 +150,7 @@
   div {
     display: flex;
     align-items: center;
+    height: 30px;
     input {
       margin-right: 25px;
       margin-left: 3px;
@@ -161,7 +162,7 @@
     .date {
       color: #292b33;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: $font_weight-400;
     }
     .table_avatar {
       height: 28px;
@@ -170,12 +171,49 @@
     }
     .table_icon {
       margin-right: 8px;
-      height: 15px;
-      width: 15px;
+      height: 20px;
+      width: 20px;
     }
-    button {
-      background-color: transparent;
-      border: none;
+  }
+}
+.table_row {
+  .date_data {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .date_data_wrapper {
+      padding: 8px 4px;
+      border-radius: 4px;
+      &:hover {
+        background-color: #fbf2f3;
+        border: 1px dashed #e7aeb4;
+      }
+    }
+  }
+}
+
+a {
+  height: 10;
+  .table_flag--yellow {
+    //  border: 1px dashed #fcd34d;
+    border: 1px dashed transparent;
+    padding: 5px;
+    &:hover {
+      background-color: #fffbeb;
+      border-color: #fcd34d;
+    }
+
+    border-radius: 8px;
+  }
+
+  .table_flag--blue {
+    border: 1px dashed transparent;
+    padding: 5px;
+    border-radius: 8px;
+    &:hover {
+      background-color: #e8edfb;
+      border-color: #8ea7ec;
     }
   }
 }
