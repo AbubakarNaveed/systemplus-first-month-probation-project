@@ -562,6 +562,10 @@
 }
 .table_row .task_data {
   flex: 1.4;
+  gap: 16px;
+}
+.table_row .task_data input {
+  margin: 0;
 }
 .table_row .avatar_data {
   flex: 1;
@@ -634,9 +638,186 @@ a .table_flag--blue:hover {
   border-color: #8ea7ec;
 }
 
+.table_data_responsive {
+  display: none;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e7aeb4;
+  border-radius: 50%;
+  /* Adjust as needed for spacing */
+  vertical-align: middle; /* Align the radio button with the text properly */
+}
+
+input[type=checkbox]:checked {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #e7aeb4;
+}
+
+.dot_button {
+  display: none;
+}
+.dot_button button {
+  background-color: transparent !important;
+  padding: 6px !important;
+  border-radius: 8px;
+  border: 1px solid #dcdee6;
+}
+.dot_button button img {
+  height: 20px;
+  width: 20px;
+}
+
 @media only screen and (max-width: 1099px) {
   .table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .table_data_responsive {
+    display: flex;
+    padding: 16px 24px 20px 24px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .table_data_responsive .column-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .table_data_responsive .column-1 > div:last-child {
+    margin-top: 16px;
+  }
+  .table_data_responsive .column-1 input {
+    border: 1px solid #dcdee6;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #000000;
+    background-color: #f9fafc;
+  }
+  .table_data_responsive .column-1 .header_text {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #6b6f80;
+    letter-spacing: 0.96px;
+    height: 24px;
+  }
+  .table_data_responsive .column-1 .header_text_small {
+    color: #838799;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .table_data_responsive input[type=date]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    display: block;
+    background: url(../../../assests/calendarPicker.svg);
+    font-family: Inter;
+  }
+  .table_data_responsive .column-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 8px;
+  }
+  .table_data_responsive .column-2 .avatar_data {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .table_data_responsive .column-2 .avatar_data img {
+    height: 24px;
+    height: 24px;
+    border-radius: 2000px;
+  }
+  .table_data_responsive .column-2 .avatar_data p {
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .table_data_responsive .column-2 > div:last-child {
+    margin-top: 16px;
+  }
+  .table_data_responsive .column-2 > div:last-child p {
+    color: #838799;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .table_data_responsive .column-2 > div:last-child div {
+    padding: 8px 12px;
+    display: flex;
+    border-radius: 4px;
+    gap: 12px;
+    align-items: center;
+    border: 1px solid #dcdee6;
+    background-color: #f9fafc;
+  }
+  .table_data_responsive .column-2 > div:last-child div img {
+    height: 16px;
+    width: 16px;
+  }
+  .table_data_responsive .column-2 > div:last-child div p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+  }
+  .table_header {
     display: none;
+  }
+  .table_data > .table_row {
+    display: none;
+  }
+  .table_data > .table_row:first-child {
+    display: block;
+    border: none;
+  }
+  .table_data > .table_row:first-child .task_data {
+    gap: 8px;
+  }
+  .table_data > .table_row:first-child .task_data input {
+    margin: 0;
+  }
+  .table_data > .table_row:first-child button {
+    padding: 8px 16px;
+    border-radius: 200px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .table_data > .table_row:first-child .avatar_data {
+    display: none;
+  }
+  .table_data > .table_row:first-child .date_data {
+    display: none;
+  }
+  .table_data > .table_row:first-child > div:last-child {
+    display: none !important;
+    background-color: red;
+  }
+  .table_function .section2 > button {
+    display: none;
+  }
+  .table_function .section2 > div {
+    display: block;
+  }
+  .table_function .section1 img {
+    display: none;
+  }
+  .table_wrapper {
+    border: none;
   }
 }
 .mobile_view_topbar {
@@ -668,204 +849,6 @@ a .table_flag--blue:hover {
 @media only screen and (max-width: 1284px) {
   .mobile_view_topbar {
     display: flex;
-  }
-}
-.responsive_table {
-  display: none;
-  width: 510px;
-  justify-content: center;
-  margin: 0 auto;
-  flex-direction: column;
-  align-items: center;
-}
-
-.function_stack {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.function_stack_row {
-  padding: 12px 20px;
-  background-color: #fbf2f3;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.function_stack_row .button_section {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-left: 10px;
-}
-.function_stack_row .button_section p {
-  color: black;
-  font-size: 14px;
-  font-weight: 600;
-}
-.function_stack_row .button_section .button {
-  padding: 8px 16px;
-  border-radius: 200px;
-  font-size: 12px;
-  font-weight: 500;
-}
-.function_stack_row .button_section .--blue {
-  border: 1px solid #bbcaf3;
-  background-color: #e8edfb;
-}
-.function_stack_row .button_section .--yellow {
-  background-color: #f59e0b;
-  border: 1px solid #f59e0b;
-  color: #fff;
-}
-.function_stack_row .button_section .--pink {
-  background-color: #fee2e2;
-  border: 1px solid #fecaca;
-  color: black;
-}
-.function_stack_row .dot_button button {
-  padding: 6px;
-  border-radius: 8px;
-  border: 1px solid #dcdee6;
-}
-.function_stack_row .dot_button button img {
-  height: 20px;
-  width: 20px;
-}
-
-.data_stack {
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.data_section_1 {
-  display: flex;
-  justify-content: flex-start;
-}
-.data_section_1 div {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.data_section_1 div p {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.data_section_2 {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.data_section_2 .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.data_section_2 .row .task_name {
-  font-size: 12px;
-  color: #6b6f80;
-  text-transform: uppercase;
-}
-.data_section_2 .row .avatar_data {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.data_section_2 .row .avatar_data p {
-  font-size: 12px;
-  font-weight: 500;
-}
-.data_section_2 .row .avatar_data img {
-  height: 24px;
-  width: 24px;
-  border-radius: 2000px;
-}
-
-input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 1;
-  display: block;
-  background: url(../../../assests/calendarPicker.svg);
-  font-family: Inter;
-}
-
-.data_section_3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.data_section_3 .button_section_1 {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.data_section_3 .button_section_1 p {
-  font-size: 12px;
-  color: #6b6f80;
-}
-.data_section_3 .button_section_1 input {
-  border: 1px solid #dcdee6;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  color: #000000;
-  background-color: #f9fafc;
-}
-.data_section_3 .button_section_2 {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.data_section_3 .button_section_2 p {
-  font-size: 12px;
-  color: #6b6f80;
-}
-.data_section_3 .button_section_2 div {
-  padding: 8px 12px;
-  display: flex;
-  border-radius: 4px;
-  gap: 12px;
-  align-items: center;
-  border: 1px solid #dcdee6;
-}
-.data_section_3 .button_section_2 div img {
-  height: 16px;
-  width: 16px;
-}
-.data_section_3 .button_section_2 div p {
-  font-size: 12px;
-  font-weight: 500;
-  color: #000000;
-}
-
-input[type=checkbox] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 15px;
-  height: 15px;
-  border: 1px solid #e7aeb4;
-  border-radius: 50%;
-  /* Adjust as needed for spacing */
-  vertical-align: middle; /* Align the radio button with the text properly */
-}
-
-input[type=checkbox]:checked {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #e7aeb4;
-}
-
-@media only screen and (max-width: 1099px) {
-  .responsive_table {
-    display: flex;
-    width: 100%;
   }
 }
 * {

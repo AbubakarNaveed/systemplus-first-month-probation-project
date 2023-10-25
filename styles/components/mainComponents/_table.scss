@@ -139,6 +139,10 @@
 
   .task_data {
     flex: 1.4;
+    gap: 16px;
+    input {
+      margin: 0;
+    }
   }
   .avatar_data {
     flex: 1;
@@ -218,8 +222,200 @@ a {
   }
 }
 
+.table_data_responsive {
+  display: none;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e7aeb4;
+  border-radius: 50%;
+  /* Adjust as needed for spacing */
+  vertical-align: middle; /* Align the radio button with the text properly */
+}
+
+input[type="checkbox"]:checked {
+  appearance: none;
+  background-color: #e7aeb4;
+  //   color: $bg_color-sidebar-button-hover; /* Align the radio button with the text properly */
+}
+
+.dot_button {
+  display: none;
+  button {
+    background-color: transparent !important;
+    padding: 6px !important;
+    border-radius: 8px;
+    border: 1px solid $border_color;
+
+    img {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1099px) {
   .table {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+  }
+  .table_data_responsive {
+    display: flex;
+    padding: 16px 24px 20px 24px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    .column-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+
+      & > div:last-child {
+        margin-top: 16px;
+      }
+
+      input {
+        border: 1px solid $border_color;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: $font_size-sm;
+        color: #000000;
+        background-color: $bg_color;
+      }
+
+      .header_text {
+        @include headerText();
+        height: 24px;
+      }
+      .header_text_small {
+        color: #838799;
+        font-size: 12px;
+        font-family: Inter;
+        font-weight: 500;
+        line-height: 16px;
+      }
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 1;
+      display: block;
+      background: url(../../../assests/calendarPicker.svg);
+      font-family: Inter;
+      //no-repeat;
+    }
+
+    .column-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 8px;
+
+      .avatar_data {
+        display: flex;
+        align-items: center;
+
+        gap: 8px;
+        img {
+          height: 24px;
+          height: 24px;
+          border-radius: 2000px;
+        }
+        p {
+          font-size: 12px;
+          font-family: Inter;
+          font-weight: 500;
+          line-height: 16px;
+        }
+      }
+
+      & > div:last-child {
+        margin-top: 16px;
+        p {
+          color: #838799;
+          font-size: 12px;
+          font-family: Inter;
+          font-weight: 500;
+          line-height: 16px;
+        }
+        div {
+          padding: 8px 12px;
+          display: flex;
+          border-radius: 4px;
+          gap: 12px;
+          align-items: center;
+          border: 1px solid $border_color;
+          background-color: #f9fafc;
+          img {
+            height: 16px;
+            width: 16px;
+          }
+          p {
+            font-size: $font_size-sm;
+            font-weight: $font_weight-500;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+
+  .table_header {
     display: none;
+  }
+  .table_data {
+    & > .table_row {
+      display: none;
+    }
+    & > .table_row:first-child {
+      display: block;
+
+      border: none;
+      .task_data {
+        gap: 8px;
+        input {
+          margin: 0;
+        }
+      }
+      button {
+        padding: 8px 16px;
+        border-radius: 200px;
+        font-size: $font_size-sm;
+        font-weight: $font_weight-500;
+      }
+      .avatar_data {
+        display: none;
+      }
+      .date_data {
+        display: none;
+      }
+      & > div:last-child {
+        display: none !important;
+        background-color: red;
+      }
+    }
+  }
+  .table_function {
+    .section2 {
+      & > button {
+        display: none;
+      }
+      & > div {
+        display: block;
+      }
+    }
+    .section1 {
+      img {
+        display: none;
+      }
+    }
+  }
+  .table_wrapper {
+    border: none;
   }
 }
