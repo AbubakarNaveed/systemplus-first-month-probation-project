@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-left: 10px;
     p {
       color: black;
       font-size: 14px;
@@ -191,11 +192,12 @@ input[type="checkbox"]:checked {
 @media only screen and (max-width: 1099px) {
   .responsive_table {
     display: flex;
-  }
-}
-
-@media only screen and (max-width: 510px) {
-  .responsive_table {
     width: 100%;
   }
 }
+
+// @media only screen and (max-width: 510px) {
+//   .responsive_table {
+//     width: 100%;
+//   }
+// }

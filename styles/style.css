@@ -245,18 +245,23 @@
   padding: 0px 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   gap: 10px;
   max-width: 1250px;
   margin: 24px auto;
 }
 
+.wigdet_row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
 .widget {
   padding: 20px;
+  width: 100%;
   border: 1px solid #dcdee6;
   border-radius: 12px;
-  min-width: 280px;
 }
 .widget:hover {
   border-color: #e7aeb4;
@@ -274,6 +279,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  height: 35px;
   justify-content: space-between;
 }
 
@@ -287,7 +293,7 @@
 .widget_header_icon_section {
   display: flex;
   align-items: center;
-  height: 25px;
+  height: 35px;
   gap: 3px;
 }
 .widget_header_icon_section p {
@@ -371,62 +377,16 @@
     padding: 20px;
     border: 1px solid #dcdee6;
     border-radius: 12px;
-    min-width: 290px;
   }
 }
-@media only screen and (max-width: 1488px) {
-  .widget {
-    padding: 20px;
-    border: 1px solid #dcdee6;
-    border-radius: 12px;
-    min-width: 280px;
-  }
-}
-@media only screen and (max-width: 1444px) {
-  .widget {
-    padding: 20px;
-    border: 1px solid #dcdee6;
-    border-radius: 12px;
-    min-width: 260px;
-  }
-}
-@media only screen and (max-width: 1378px) {
-  .widget {
-    min-width: 248px;
-  }
+@media only screen and (max-width: 853px) {
   .wigdet_container {
-    justify-content: center;
     flex-wrap: wrap;
   }
 }
-@media only screen and (max-width: 1284px) {
+@media only screen and (max-width: 550px) {
   .widget {
-    min-width: 280px;
-  }
-  .wigdet_container {
-    justify-content: space-between;
-    flex-wrap: wrap;
     width: 100%;
-  }
-}
-@media only screen and (max-width: 1196px) {
-  .widget {
-    min-width: 255px;
-  }
-}
-@media only screen and (max-width: 1099px) {
-  .widget {
-    min-width: 235px;
-  }
-  .wigdet_container {
-    max-width: 750px;
-    margin: 16px auto;
-    justify-content: center;
-  }
-}
-@media only screen and (max-width: 510px) {
-  .widget {
-    min-width: 175px !important;
     padding: 8px;
   }
   .wigdet_container {
@@ -461,10 +421,9 @@
     align-items: center;
   }
 }
-@media only screen and (max-width: 409px) {
-  .widget {
-    width: 100%;
-    padding: 8px;
+@media only screen and (max-width: 420px) {
+  .wigdet_row {
+    flex-wrap: wrap;
   }
 }
 .table {
@@ -738,6 +697,7 @@ a .table_flag--blue:hover {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-left: 10px;
 }
 .function_stack_row .button_section p {
   color: black;
@@ -905,10 +865,6 @@ input[type=checkbox]:checked {
 @media only screen and (max-width: 1099px) {
   .responsive_table {
     display: flex;
-  }
-}
-@media only screen and (max-width: 510px) {
-  .responsive_table {
     width: 100%;
   }
 }
