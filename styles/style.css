@@ -9,7 +9,7 @@
   background-color: white;
   align-items: center;
   justify-content: space-between;
-  overflow-y: scroll;
+  overflow-y: auto !important;
   overflow-x: hidden;
 }
 
@@ -171,15 +171,12 @@
   width: 16px;
 }
 
-@media only screen and (max-width: 1284px) {
+@media only screen and (max-width: 1313px) {
   .sidebar {
     width: 100%;
     flex-direction: row;
     height: 10vh;
     border-bottom: 1px solid #dcdee6;
-  }
-  .sidebar .sidebar-wrapper .header {
-    margin: 24px 0px;
   }
   .sidebar .sidebar-wrapper .sidebar-btn {
     display: none;
@@ -583,7 +580,7 @@
   padding: 8px 24px;
 }
 .table_row .task_data {
-  flex: 1.4;
+  flex: 1.5;
   gap: 16px;
 }
 .table_row .task_data input {
@@ -864,7 +861,7 @@ body {
   width: calc(100vw - 250px);
 }
 
-@media only screen and (max-width: 1284px) {
+@media only screen and (max-width: 1313px) {
   .main {
     width: 100%;
   }
