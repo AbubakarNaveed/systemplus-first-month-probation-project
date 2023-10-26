@@ -194,6 +194,23 @@
 }
 @media only screen and (max-width: 1284px) {
   .sidebar {
-    display: none;
+    width: 100%;
+    flex-direction: row;
+    height: 10vh;
+    border-bottom: 1px solid $border_color;
+    .sidebar-wrapper {
+      .header {
+        margin: 24px 0px;
+      }
+      .sidebar-btn {
+        display: none;
+      }
+      .sidebar-icon-buttons {
+        display: none;
+      }
+    }
+    .profile {
+      display: none;
+    }
   }
 }
